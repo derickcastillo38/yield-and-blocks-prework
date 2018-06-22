@@ -1,4 +1,4 @@
-def hello_t(array, &prc)
+def hello_t(array)
   puts "Hey! No block was given!" if prc.nil?
   array.each {|el| yield(el)}
 end
