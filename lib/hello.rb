@@ -1,6 +1,9 @@
 def hello_t(array, &prc)
-  puts "Hey! No block was given!" if prc.nil?
-  array.each {|el| yield(el)}
+  if block_given?
+    array.each {|el| yield(el)}
+  else 
+    puts "Hey! No block was given!"
+  end
 end
 
 # call your method here!
